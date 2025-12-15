@@ -1,3 +1,4 @@
+welcome to Debeatzgh.
 # Your digital growth hub for smart tools, creative ideas, and online assets & opportunities.
 ## Topic: Facebook Digital Creation ( part 1)
  Facebook is no longer just a social app—it’s a powerful digital creation and income platform.
