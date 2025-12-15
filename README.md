@@ -1,14 +1,112 @@
-welcome to Debeatzgh.
-# Your digital growth hub for smart tools, creative ideas, and online assets & opportunities.
-## Topic: Facebook Digital Creation ( part 1)
- Facebook is no longer just a social app—it’s a powerful digital creation and income platform.
-And today, I’ll show you how creators are using Facebook to grow audiences, build brands, and earn online.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Playlist Modal</title>
 
+<style>
+/* Floating Button */
+.yt-float-btn {
+  position: fixed;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff0000;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  transition: transform .25s ease;
+}
+.yt-float-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+}
 
-Facebook digital creation means turning your ideas into content—videos, reels, posts, stories, and lives—that attract attention and deliver value.
-Whether you’re teaching, entertaining, selling, or sharing knowledge, Facebook gives you free tools to reach thousands—or even millions.
+/* Modal Overlay */
+#yt-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  z-index: 100000;
+}
 
+/* Modal Box */
+.yt-modal-box {
+  width: 96%;
+  height: 92%;
+  margin: 3% auto;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
 
-With Facebook Pages, Reels monetization, groups, in-stream ads, affiliate links, and digital products, creators can grow step by step—without expensive tools.
-All you need is consistency, clarity, and creativity.
- 
+/* Close Button */
+.yt-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Iframe */
+.yt-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Button -->
+<div class="yt-float-btn" onclick="openYT()">
+▶ Watch Playlist
+</div>
+
+<!-- Modal -->
+<div id="yt-modal">
+  <div class="yt-modal-box">
+    <span class="yt-close" onclick="closeYT()">✖</span>
+
+    <iframe
+      class="yt-frame"
+      src=""
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<script>
+function openYT() {
+  const modal = document.getElementById("yt-modal");
+  const iframe = modal.querySelector("iframe");
+
+  iframe.src =
+    "https://www.youtube.com/embed/videoseries?list=PLMOQxjh_hNfRbNjMEMpG_wBsf4NODJGEG&autoplay=1";
+
+  modal.style.display = "block";
+}
+
+function closeYT() {
+  const modal = document.getElementById("yt-modal");
+  const iframe = modal.querySelector("iframe");
+
+  iframe.src = "";
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
